@@ -1,42 +1,36 @@
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#050816">
+    <meta name="theme-color" content="#06070f">
     <meta name="description" content="Portfólio de Aldemiro Manuel Dos Santos Caracol — Caracol Dev.">
-
     <title>Aldemiro Caracol | Caracol Dev</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- GSAP e ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
 
 <header class="site-header">
     <div class="container navbar">
         <a class="brand" href="#inicio">
-            <span class="logo">AD<span>.</span></span>
+            <span class="logo">AC<span>.</span></span>
             <span class="brand-text">
-                <strong>Aldemiro Manuel Dos Santos Caracol</strong>
-                <small>Caracol Dev | Software Engineering</small>
+                <strong>Aldemiro Caracol</strong>
+                <small>Caracol Dev</small>
             </span>
         </a>
-
-        <button class="menu-toggle" id="menuToggle"
-                aria-label="Abrir menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
 
         <nav class="nav-links" id="navLinks">
             <a href="#inicio">Início</a>
@@ -47,66 +41,60 @@
             <a href="#marcela">Marcela ♥</a>
             <a href="#contactos">Contactos</a>
         </nav>
+
+        <div class="nav-tools">
+            <button class="icon-btn" id="themeToggle" aria-label="Mudar tema"><i class="fa-solid fa-moon"></i></button>
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </div>
 </header>
 
 <main>
-    <!-- HERO -->
+    <!-- INÍCIO -->
     <section class="container hero" id="inicio">
         <div class="hero-copy">
-            <div class="status">
-                <span class="status-dot"></span>
-                A aprender, construir e evoluir
-            </div>
-
-            <p class="eyebrow">OLÁ, MUNDO! SOU</p>
+            <div class="status"><span class="status-dot"></span> Disponível para aprender e colaborar</div>
 
             <h1>
-                Aldemiro Manuel
-                <span class="gradient">Dos Santos Caracol.</span>
+                Olá, eu sou o <br>
+                <span class="gradient">Aldemiro Caracol.</span>
             </h1>
 
-            <h2>Sou <span id="typed-text">Desenvolvedor de Software</span></h2>
+            <h2><span class="prompt">&gt;</span> <span id="typed-text"></span><span class="caret"></span></h2>
 
             <p class="hero-description">
-                Apaixonado por tecnologia, programação e Engenharia de
-                Software. Procuro transformar ideias em soluções digitais
-                úteis, seguras, organizadas e fáceis de manter.
+                Construo software útil, seguro e fácil de manter. Estudo Python e
+                React, e transformo ideias em sistemas reais a partir de Angola.
             </p>
 
             <div class="hero-actions">
-                <a class="btn btn-primary" href="#projetos">
-                    Ver projetos <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a class="btn btn-outline" href="#sobre">Conhecer-me</a>
+                <a class="btn btn-primary" href="#projetos">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="btn btn-outline" href="#contactos">Falar comigo</a>
+            </div>
+
+            <div class="stats">
+                <div><strong data-count="4">0</strong><span>projetos</span></div>
+                <div><strong data-count="10">0</strong><span>tecnologias</span></div>
+                <div><strong data-count="365">0</strong><span>dias a evoluir</span></div>
             </div>
 
             <div class="socials">
-                <a href="https://github.com/aldemirodev6"
-                   target="_blank" rel="noopener noreferrer"
-                   aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="#contactos" aria-label="Email">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-                <a href="#marcela" aria-label="Marcela">
-                    <i class="fa-solid fa-heart"></i>
-                </a>
+                <a href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#contactos" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#marcela" aria-label="Marcela"><i class="fa-solid fa-heart"></i></a>
             </div>
         </div>
 
         <div class="hero-visual">
             <div class="orb"></div>
-
-            <div class="code-card">
+            <div class="code-card tilt">
                 <div class="code-header">
                     <span></span><span></span><span></span>
                     <small>developer.py</small>
                 </div>
-
-                <pre><code><span class="code-purple">class</span> <span class="code-green">Developer</span>:
+<pre><code><span class="code-purple">class</span> <span class="code-green">Developer</span>:
     name = <span class="code-yellow">"Aldemiro"</span>
+    stack = [<span class="code-yellow">"Python"</span>, <span class="code-yellow">"React"</span>]
     location = <span class="code-yellow">"Angola"</span>
 
     <span class="code-purple">def</span> <span class="code-blue">create</span>(self):
@@ -114,183 +102,142 @@
 
 <span class="code-comment"># Aprender. Construir. Evoluir.</span></code></pre>
             </div>
-
-            <div class="tech-chip chip-one">
-                <i class="fa-brands fa-python"></i> Python
-            </div>
-            <div class="tech-chip chip-two">
-                <i class="fa-brands fa-react"></i> React.js
-            </div>
-            <div class="tech-chip chip-three">
-                <i class="fa-solid fa-code"></i> Clean Code
-            </div>
+            <div class="tech-chip chip-one"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="tech-chip chip-two"><i class="fa-brands fa-react"></i> React.js</div>
+            <div class="tech-chip chip-three"><i class="fa-solid fa-code"></i> Clean Code</div>
         </div>
     </section>
 
-    <!-- SOBRE MIM -->
+    <!-- SOBRE -->
     <section class="container section" id="sobre">
         <div class="section-heading reveal">
-            <p class="eyebrow">QUEM SOU</p>
             <h2 class="section-title">Sobre mim</h2>
-            <p class="section-description">
-                Conhece a minha jornada no desenvolvimento de software.
-            </p>
+            <p class="section-description">A minha jornada no desenvolvimento de software.</p>
         </div>
 
-        <div class="panel about-card reveal">
-            <h3>Olá, sou o Aldemiro!</h3>
-            <p>
-                Sou Aldemiro Manuel Dos Santos Caracol, de Angola, e tenho
-                interesse em desenvolvimento web, programação, bases de dados
-                e criação de sistemas. Estou a construir as minhas competências
-                passo a passo, valorizando a aprendizagem contínua e as boas
-                práticas de Engenharia de Software.
-            </p>
+        <div class="bento">
+            <article class="panel about-card reveal spot">
+                <h3>Aldemiro Manuel Dos Santos Caracol</h3>
+                <p>
+                    Sou de Angola e tenho interesse em desenvolvimento web, programação,
+                    bases de dados e criação de sistemas. Construo as minhas competências
+                    passo a passo, valorizando a aprendizagem contínua e as boas práticas
+                    de Engenharia de Software.
+                </p>
+                <div class="facts">
+                    <span><i class="fa-solid fa-location-dot"></i> Angola</span>
+                    <span><i class="fa-solid fa-laptop-code"></i> Desenvolvimento</span>
+                    <span><i class="fa-solid fa-graduation-cap"></i> Aprendizagem contínua</span>
+                </div>
+            </article>
 
-            <div class="facts">
-                <span><i class="fa-solid fa-location-dot"></i> Angola</span>
-                <span><i class="fa-solid fa-laptop-code"></i> Desenvolvimento</span>
-                <span><i class="fa-solid fa-graduation-cap"></i> Aprendizagem contínua</span>
-            </div>
+            <article class="panel quote-card reveal spot">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>Código simples, claro e testado vale mais do que código esperto.</p>
+                <small>O meu princípio</small>
+            </article>
+
+            <article class="panel reveal spot mini">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Objetivo</h3>
+                <p>Tornar-me Engenheiro de Software.</p>
+            </article>
+            <article class="panel reveal spot mini">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>A estudar</h3>
+                <p>Python, React e arquitetura.</p>
+            </article>
         </div>
     </section>
 
     <!-- COMPETÊNCIAS -->
     <section class="container section" id="competencias">
         <div class="section-heading reveal">
-            <p class="eyebrow">TECNOLOGIAS</p>
             <h2 class="section-title">Minhas competências</h2>
-            <p class="section-description">
-                Tecnologias e ferramentas que estudo e utilizo nos meus projetos.
-            </p>
+            <p class="section-description">Tecnologias que estudo e uso nos meus projetos. Filtra por área.</p>
         </div>
 
-        <div class="skills-grid">
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-python"></i>
-                <div><strong>Python</strong><small>Programação</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-html5"></i>
-                <div><strong>HTML5</strong><small>Estrutura web</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-css3-alt"></i>
-                <div><strong>CSS3</strong><small>Design responsivo</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-js"></i>
-                <div><strong>JavaScript</strong><small>Interatividade</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-react"></i>
-                <div><strong>React.js</strong><small>Interfaces</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-brands fa-git-alt"></i>
-                <div><strong>Git e GitHub</strong><small>Versionamento</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-solid fa-database"></i>
-                <div><strong>SQL</strong><small>Bases relacionais</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-solid fa-leaf"></i>
-                <div><strong>MongoDB</strong><small>Bases documentais</small></div>
-            </article>
-            <article class="panel skill reveal">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <div><strong>GSAP</strong><small>Animações</small></div>
-            </article>
+        <div class="filters reveal" data-target="skills-grid">
+            <button class="chip active" data-filter="all">Todas</button>
+            <button class="chip" data-filter="backend">Backend</button>
+            <button class="chip" data-filter="frontend">Frontend</button>
+            <button class="chip" data-filter="dados">Dados</button>
+            <button class="chip" data-filter="ferramentas">Ferramentas</button>
         </div>
+
+        <div class="skills-grid" id="skills-grid">
+            <article class="panel skill spot" data-cat="backend" data-level="70"><i class="fa-brands fa-python"></i><div><strong>Python</strong><small>Programação</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="frontend" data-level="80"><i class="fa-brands fa-html5"></i><div><strong>HTML5</strong><small>Estrutura web</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="frontend" data-level="75"><i class="fa-brands fa-css3-alt"></i><div><strong>CSS3</strong><small>Design responsivo</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="frontend" data-level="65"><i class="fa-brands fa-js"></i><div><strong>JavaScript</strong><small>Interatividade</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="frontend" data-level="50"><i class="fa-brands fa-react"></i><div><strong>React.js</strong><small>Interfaces</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="ferramentas" data-level="70"><i class="fa-brands fa-git-alt"></i><div><strong>Git e GitHub</strong><small>Versionamento</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="dados" data-level="65"><i class="fa-solid fa-database"></i><div><strong>SQL</strong><small>Bases relacionais</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="dados" data-level="40"><i class="fa-solid fa-leaf"></i><div><strong>MongoDB</strong><small>Bases documentais</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="frontend" data-level="55"><i class="fa-solid fa-wand-magic-sparkles"></i><div><strong>GSAP</strong><small>Animações</small><div class="bar"><b></b></div></div></article>
+            <article class="panel skill spot" data-cat="backend" data-level="60"><i class="fa-solid fa-window-maximize"></i><div><strong>PySide6</strong><small>Apps desktop</small><div class="bar"><b></b></div></div></article>
+        </div>
+        <p class="hint">Os níveis são indicativos: ajusta o <code>data-level</code> de cada cartão no HTML.</p>
     </section>
 
-    <!-- ENGENHARIA DE SOFTWARE -->
+    <!-- ENGENHARIA -->
     <section class="container section" id="engenharia">
         <div class="section-heading reveal">
-            <p class="eyebrow">QUALIDADE E MÉTODO</p>
             <h2 class="section-title">Engenharia de Software</h2>
-            <p class="section-description">
-                Construir software vai muito além de escrever código.
-            </p>
+            <p class="section-description">Construir software vai muito além de escrever código. É assim que trabalho, por esta ordem:</p>
         </div>
 
-        <div class="engineering-grid">
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-list-check"></i>
-                <h3>Requisitos e análise</h3>
-                <p>Compreender os problemas, identificar utilizadores e definir requisitos funcionais e não funcionais.</p>
-            </article>
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-layer-group"></i>
-                <h3>Arquitetura</h3>
-                <p>Organizar módulos, responsabilidades, camadas e dependências para facilitar a evolução do sistema.</p>
-            </article>
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-database"></i>
-                <h3>Modelação de dados</h3>
-                <p>Desenhar entidades, relações, chaves, restrições e estruturas relacionais ou documentais.</p>
-            </article>
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-vial"></i>
-                <h3>Testes e qualidade</h3>
-                <p>Praticar testes unitários, integração, validação de entradas e prevenção de regressões.</p>
-            </article>
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Segurança</h3>
-                <p>Aplicar validação, controlo de acesso, gestão de segredos e tratamento seguro de erros.</p>
-            </article>
-            <article class="panel engineering-card reveal">
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <h3>Manutenção</h3>
-                <p>Documentar, refatorar, versionar e melhorar o software ao longo do seu ciclo de vida.</p>
-            </article>
+        <div class="steps">
+            <article class="panel step reveal spot"><span class="num">1</span><i class="fa-solid fa-list-check"></i><h3>Requisitos</h3><p>Compreender o problema, os utilizadores e o que o sistema tem de fazer.</p></article>
+            <article class="panel step reveal spot"><span class="num">2</span><i class="fa-solid fa-layer-group"></i><h3>Arquitetura</h3><p>Organizar módulos, camadas e dependências para o sistema poder crescer.</p></article>
+            <article class="panel step reveal spot"><span class="num">3</span><i class="fa-solid fa-database"></i><h3>Dados</h3><p>Desenhar entidades, relações, chaves e restrições.</p></article>
+            <article class="panel step reveal spot"><span class="num">4</span><i class="fa-solid fa-vial"></i><h3>Testes</h3><p>Testes unitários, de integração e validação de entradas.</p></article>
+            <article class="panel step reveal spot"><span class="num">5</span><i class="fa-solid fa-shield-halved"></i><h3>Segurança</h3><p>Controlo de acesso, gestão de segredos e erros tratados com cuidado.</p></article>
+            <article class="panel step reveal spot"><span class="num">6</span><i class="fa-solid fa-arrows-rotate"></i><h3>Manutenção</h3><p>Documentar, refatorar e versionar ao longo de todo o ciclo de vida.</p></article>
         </div>
     </section>
 
     <!-- PROJETOS -->
     <section class="container section" id="projetos">
         <div class="section-heading reveal">
-            <p class="eyebrow">PORTFÓLIO</p>
             <h2 class="section-title">Projetos em destaque</h2>
-            <p class="section-description">
-                Exemplos de projetos que podes desenvolver e apresentar.
-                Atualiza as ligações para os repositórios de cada projeto.
-            </p>
+            <p class="section-description">Atualiza as ligações para os repositórios de cada projeto.</p>
         </div>
 
-        <div class="projects-grid">
-            <article class="panel project-card reveal">
+        <div class="filters reveal" data-target="projects-grid">
+            <button class="chip active" data-filter="all">Todos</button>
+            <button class="chip" data-filter="python">Python</button>
+            <button class="chip" data-filter="web">Web</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            <article class="panel project-card spot tilt" data-cat="python">
                 <div class="project-image"><i class="fa-solid fa-graduation-cap"></i></div>
                 <h3>Sistema de Gestão Escolar</h3>
-                <p>Aplicação para gerir alunos, classes, turmas, encarregados e processos escolares.</p>
+                <p>Aplicação desktop para gerir alunos, classes, turmas, encarregados e processos escolares.</p>
                 <div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">SQL</span></div>
-                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </article>
-
-            <article class="panel project-card reveal">
+            <article class="panel project-card spot tilt" data-cat="web">
                 <div class="project-image"><i class="fa-solid fa-code"></i></div>
                 <h3>Portfólio Web</h3>
-                <p>Site pessoal com animações, layout adaptável e apresentação das minhas competências.</p>
+                <p>Site pessoal com animações, tema claro/escuro e layout adaptável.</p>
                 <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GSAP</span></div>
-                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </article>
-
-            <article class="panel project-card reveal">
+            <article class="panel project-card spot tilt" data-cat="web">
                 <div class="project-image"><i class="fa-solid fa-globe"></i></div>
                 <h3>Aplicação Web</h3>
-                <p>Projeto de prática para aprender componentes, estado, navegação e consumo de APIs.</p>
+                <p>Projeto de prática: componentes, estado, navegação e consumo de APIs.</p>
                 <div class="tags"><span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">API</span></div>
-                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </article>
-
-            <article class="panel project-card reveal">
+            <article class="panel project-card spot tilt" data-cat="python">
                 <div class="project-image"><i class="fa-solid fa-server"></i></div>
                 <h3>API com Python</h3>
-                <p>Espaço para APIs, validação de dados, integração com bases de dados e testes.</p>
+                <p>APIs com validação de dados, base de dados e testes automáticos.</p>
                 <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Testes</span></div>
-                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+                <a class="project-link" href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">Ver no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </article>
         </div>
     </section>
@@ -298,30 +245,23 @@
     <!-- MARCELA -->
     <section class="container love-section" id="marcela">
         <div class="love-card">
+            <div class="hearts" id="hearts" aria-hidden="true"></div>
             <div class="love-copy">
                 <p class="love-label"><i class="fa-solid fa-heart"></i> Uma parte especial da minha vida</p>
                 <h2>Marcela, <span>o amor da minha vida.</span> ♥</h2>
-
                 <p>
-                    Marcela, és uma pessoa muito especial para mim. No meio dos
-                    meus sonhos, dos meus estudos e de tudo o que quero construir,
-                    existe um lugar reservado no meu coração para ti.
+                    Marcela, és uma pessoa muito especial para mim. No meio dos meus
+                    sonhos, dos meus estudos e de tudo o que quero construir, existe
+                    um lugar reservado no meu coração para ti.
                 </p>
-
                 <p>
-                    O teu carinho torna os dias mais bonitos e dá ainda mais
-                    significado à caminhada. Quero continuar a crescer, aprender
-                    e construir um futuro melhor, valorizando o amor que sinto por ti.
+                    O teu carinho torna os dias mais bonitos e dá ainda mais significado
+                    à caminhada. Quero continuar a crescer, aprender e construir um
+                    futuro melhor, valorizando o amor que sinto por ti.
                 </p>
-
                 <p class="love-signature">Com todo o meu amor, Aldemiro. ❤️</p>
-
-                <button class="btn love-button" id="loveButton">
-                    <i class="fa-solid fa-heart"></i>
-                    Te amo, Marcela
-                </button>
+                <button class="btn love-button" id="loveButton"><i class="fa-solid fa-heart"></i> Te amo, Marcela</button>
             </div>
-
             <div class="love-art">
                 <div class="heart-ring">
                     <div class="heart-center">
@@ -337,28 +277,26 @@
     <!-- CONTACTOS -->
     <section class="container section" id="contactos">
         <div class="section-heading reveal">
-            <p class="eyebrow">VAMOS CONVERSAR</p>
-            <h2 class="section-title">Contactos</h2>
-            <p class="section-description">
-                Encontra-me no GitHub ou substitui os dados abaixo pelos teus contactos reais.
-            </p>
+            <h2 class="section-title">Vamos construir algo útil</h2>
+            <p class="section-description">Escreve-me uma mensagem. Abre no teu programa de email, pronta a enviar.</p>
         </div>
 
-        <div class="panel contact-card reveal">
-            <h3>Vamos construir algo útil.</h3>
-            <p>
-                Estou interessado em aprender, colaborar e desenvolver soluções
-                tecnológicas com qualidade.
-            </p>
-            <div class="contact-links">
-                <a href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-                <a href="mailto:teuemail@example.com">
-                    <i class="fa-regular fa-envelope"></i> Email
-                </a>
+        <div class="contact-grid">
+            <div class="panel contact-card reveal spot">
+                <h3>Contactos</h3>
+                <p>Estou interessado em aprender, colaborar e desenvolver soluções tecnológicas com qualidade.</p>
+                <div class="contact-links">
+                    <a href="https://github.com/aldemirodev6" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <button type="button" id="copyEmail" data-email="teuemail@example.com"><i class="fa-regular fa-copy"></i> Copiar email</button>
+                </div>
+                <small class="email-note">Substitui teuemail@example.com pelo teu email verdadeiro (aqui e no JavaScript/HTML).</small>
             </div>
-            <small class="email-note">Altera teuemail@example.com para o teu email verdadeiro.</small>
+
+            <form class="panel contact-card reveal spot" id="contactForm" data-email="teuemail@example.com">
+                <label>Nome<input type="text" id="cName" required autocomplete="name"></label>
+                <label>Mensagem<textarea id="cMsg" rows="4" required></textarea></label>
+                <button class="btn btn-primary" type="submit">Enviar mensagem <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
 </main>
@@ -370,13 +308,7 @@
     </div>
 </footer>
 
-<div class="toast" id="loveToast" role="status" aria-live="polite">
-    Marcela, és muito especial. ❤️
-</div>
-
-<a class="back-top" id="backTop" href="#inicio" aria-label="Voltar ao início">
-    <i class="fa-solid fa-arrow-up"></i>
-</a>
-
+<div class="toast" id="loveToast" role="status" aria-live="polite">Marcela, és muito especial. ❤️</div>
+<a class="back-top" id="backTop" href="#inicio" aria-label="Voltar ao início"><i class="fa-solid fa-arrow-up"></i></a>
 </body>
 </html>
