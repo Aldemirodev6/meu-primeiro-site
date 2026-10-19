@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de desenvolvimento de software, engenharia de software e tecnologias web.">
+  <title>Portfólio | Desenvolvedor de Software</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="container nav" aria-label="Navegação principal">
+      <a href="#inicio" class="logo">&lt;Dev<span>Portfolio</span>/&gt;</a>
+
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#engenharia">Engenharia de Software</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">DESENVOLVIMENTO • TECNOLOGIA • INOVAÇÃO</p>
+
+          <h1>Transformar ideias em
+            <span class="gradient">software de qualidade.</span>
+          </h1>
+
+          <p class="description">
+            Sou [O Teu Nome], interessado em desenvolvimento web,
+            programação e Engenharia de Software. Aprendo através de
+            projetos práticos, documentação e resolução de problemas.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="#projetos">Explorar projetos ↗</a>
+            <a class="button secondary" href="#contactos">Contactar</a>
+          </div>
+
+          <p class="location">📍 Angola · Desenvolvedor em formação</p>
+        </div>
+
+        <div class="code-card">
+          <div class="code-header">
+            <span>●</span><span>●</span><span>●</span>
+            <small>developer.py</small>
+          </div>
+          <pre><code>class Developer:
+    def __init__(self):
+        self.location = "Angola"
+        self.skills = [
+            "Python",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js",
+            "SQL",
+            "MongoDB"
+        ]
+
+    def improve(self):
+        return "Aprender todos os dias"
+
+developer = Developer()</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="sobre">
+      <div class="container two-columns">
+        <div>
+          <p class="eyebrow">01 / SOBRE MIM</p>
+          <h2>Aprender. Construir. <span class="gradient">Evoluir.</span></h2>
+        </div>
+        <div>
+          <p>
+            Tenho interesse em criar soluções tecnológicas que resolvam
+            problemas reais. O meu objetivo é desenvolver competências
+            sólidas em programação, bases de dados, arquitetura de software
+            e desenvolvimento de aplicações.
+          </p>
+          <p>
+            Acredito que um bom software não é apenas aquele que funciona:
+            também deve ser seguro, compreensível, testável, acessível,
+            fácil de manter e preparado para evoluir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competencias">
+      <div class="container">
+        <p class="eyebrow">02 / COMPETÊNCIAS TÉCNICAS</p>
+        <h2>O meu universo tecnológico</h2>
+
+        <div class="grid">
+          <article class="card">
+            <span class="symbol orange">HTML</span>
+            <h3>HTML5</h3>
+            <p>Semântica, acessibilidade, formulários e estrutura web.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol blue">CSS</span>
+            <h3>CSS3</h3>
+            <p>Flexbox, Grid, animações e design responsivo.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol yellow">JS</span>
+            <h3>JavaScript</h3>
+            <p>DOM, eventos, funções, APIs e programação assíncrona.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol green">Py</span>
+            <h3>Python</h3>
+            <p>Algoritmos, automação, backend, APIs e testes.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol cyan">⚛</span>
+            <h3>React.js</h3>
+            <p>Componentes, props, estado, hooks e interfaces.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol purple">SQL</span>
+            <h3>Bases relacionais</h3>
+            <p>SQL, relações, integridade, consultas e transações.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol pink">JSON</span>
+            <h3>Bases documentais</h3>
+            <p>MongoDB, documentos, coleções e dados flexíveis.</p>
+          </article>
+
+          <article class="card">
+            <span class="symbol orange">Git</span>
+            <h3>Git e GitHub</h3>
+            <p>Versionamento, branches, commits e colaboração.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="engenharia">
+      <div class="container">
+        <p class="eyebrow">03 / ENGENHARIA DE SOFTWARE</p>
+        <h2>Mais do que escrever código</h2>
+        <p class="section-intro">
+          Engenharia de Software é a aplicação de métodos, processos e
+          ferramentas para desenvolver, testar, entregar e manter sistemas
+          fiáveis e sustentáveis.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>01. Requisitos</h3>
+            <p>Compreender os utilizadores, as necessidades e as regras do negócio.</p>
+          </article>
+          <article class="card">
+            <h3>02. Arquitetura</h3>
+            <p>Definir componentes, responsabilidades, módulos e comunicação.</p>
+          </article>
+          <article class="card">
+            <h3>03. Modelação</h3>
+            <p>Desenhar entidades, relações, fluxos, diagramas e estruturas.</p>
+          </article>
+          <article class="card">
+            <h3>04. Qualidade</h3>
+            <p>Aplicar testes unitários, integração, revisão e análise de erros.</p>
+          </article>
+          <article class="card">
+            <h3>05. Segurança</h3>
+            <p>Validar entradas, controlar acessos e proteger dados e segredos.</p>
+          </article>
+          <article class="card">
+            <h3>06. Manutenção</h3>
+            <p>Documentar, monitorizar, corrigir falhas e melhorar continuamente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <p class="eyebrow">04 / PROJETOS</p>
+        <h2>Projetos que demonstram prática</h2>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-visual visual-one">01</div>
+            <div class="project-content">
+              <p class="eyebrow">PYTHON · SQL</p>
+              <h3>Sistema de Gestão Escolar</h3>
+              <p>
+                Aplicação para gerir alunos, matrículas, turmas, avaliações
+                e pagamentos. Projeto em desenvolvimento.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">Ver repositório ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual visual-two">02</div>
+            <div class="project-content">
+              <p class="eyebrow">HTML · CSS · JAVASCRIPT</p>
+              <h3>Portfólio Web</h3>
+              <p>
+                Website responsivo com apresentação pessoal, competências,
+                projetos e contactos.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">Ver repositório ↗</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual visual-three">03</div>
+            <div class="project-content">
+              <p class="eyebrow">PYTHON · API · NOSQL</p>
+              <h3>API de Tarefas</h3>
+              <p>
+                API para criar, consultar, atualizar e eliminar tarefas,
+                com validação e testes.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">Ver repositório ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Os projetos acima são modelos de apresentação. Mantém a descrição
+          honesta e substitui os links pelos teus repositórios reais.
+        </p>
+      </div>
+    </section>
+
+    <section class="section muted" id="metodologia">
+      <div class="container">
+        <p class="eyebrow">05 / METODOLOGIA DE TRABALHO</p>
+        <h2>Como abordo um projeto</h2>
+        <div class="process">
+          <div><strong>01</strong><h3>Investigar</h3><p>Entender o problema e os utilizadores.</p></div>
+          <div><strong>02</strong><h3>Planear</h3><p>Definir requisitos, tarefas e arquitetura.</p></div>
+          <div><strong>03</strong><h3>Desenvolver</h3><p>Implementar funcionalidades por etapas.</p></div>
+          <div><strong>04</strong><h3>Testar</h3><p>Verificar requisitos, erros e segurança.</p></div>
+          <div><strong>05</strong><h3>Entregar</h3><p>Documentar, publicar e recolher feedback.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contactos">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">06 / CONTACTOS</p>
+          <h2>Vamos criar algo <span class="gradient">útil?</span></h2>
+          <p>Estou aberto a aprender, trocar conhecimentos e colaborar em projetos.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:teuemail@example.com">✉ teuemail@example.com ↗</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">⌘ GitHub ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#inicio">&lt;Dev<span>Portfolio</span>/&gt;</a>
+      <p>Construído com HTML, CSS e JavaScript.</p>
+      <p>© <span id="year"></span> [O Teu Nome]</p>
+    </div>
+  </footer>
+</body>
+</html>
